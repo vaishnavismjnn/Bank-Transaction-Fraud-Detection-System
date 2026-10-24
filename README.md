@@ -1,71 +1,67 @@
-# Bank-Transaction-Fraud-Detection-System
 
-Overview
+# Bank Transaction Fraud Detection System
 
-This project uses machine learning to identify potentially fraudulent banking transactions. It analyzes transaction data, compares multiple classification models, and predicts whether a transaction is fraudulent or legitimate.
+## Overview
+A machine learning project that detects potentially fraudulent banking transactions using transaction data and classification algorithms.
 
-Features
+## Features
+- Analyzed over 6.3 million banking transaction records.
+- Performed data cleaning, preprocessing, and feature engineering.
+- Trained and compared Logistic Regression, Random Forest, and XGBoost models.
+- Evaluated models using ROC-AUC, PR-AUC, precision, recall, and F1-score.
+- Optimized classification thresholds to balance fraud detection and false positives.
+- Developed an interactive Streamlit application for fraud prediction.
 
-Processes and analyzes large-scale banking transaction data.
+## Technologies Used
+- Python
+- Pandas, NumPy
+- Scikit-learn, XGBoost
+- Matplotlib, Seaborn
+- Streamlit
+- Jupyter Notebook
 
-Performs data cleaning, preprocessing, and feature engineering.
+## Dataset
+The dataset contains banking transaction details, transaction types, account balances, and fraud labels.
 
-Trains and evaluates Logistic Regression, Random Forest, and XGBoost models.
+- `0` – Legitimate transaction
+- `1` – Fraudulent transaction
 
-Evaluates performance using ROC-AUC, PR-AUC, precision, recall, F1-score, and a confusion matrix.
+## Model Performance
+The XGBoost model achieved the following results in the reported evaluation:
 
-Uses classification threshold optimization to balance fraud detection and false positives.
+- ROC-AUC: 99.81%
+- PR-AUC: 86.22%
 
-Provides an interactive web application using Streamlit for fraud prediction.
+Precision and recall vary depending on the classification threshold.
 
-Technologies Used
+## Project Workflow
+1. Data loading and exploratory data analysis
+2. Data cleaning and preprocessing
+3. Feature engineering
+4. Model training and evaluation
+5. Threshold optimization
+6. Fraud prediction through Streamlit
 
-Programming: Python
+## Installation
 
-Data Processing: Pandas, NumPy
+Install the required libraries:
 
-Machine Learning: Scikit-learn, XGBoost
+```bash
+pip install pandas numpy scikit-learn xgboost streamlit matplotlib seaborn joblib
+```
 
-Visualization: Matplotlib, Seaborn
+## Run the Application
 
-Web Application: Streamlit
+```bash
+streamlit run app.py
+```
 
-Environment: Jupyter Notebook
+Ensure the trained model file and required preprocessing artifacts are available before running the application.
 
-Dataset
+## Future Enhancements
+- Improve precision while maintaining high fraud recall.
+- Perform further hyperparameter tuning.
+- Evaluate model performance on unseen transactions.
 
-The project uses a banking transaction dataset containing transaction details, account balance information, transaction types, and fraud labels.
-
-The target variable is isFraud:
-
-0 – Legitimate transaction
-
-1 – Fraudulent transaction
-
-Machine Learning Models
-
-The following models are trained and compared:
-
-Logistic Regression
-
-Random Forest
-
-XGBoost
-
-XGBoost achieved a ROC-AUC of approximately 99.81% and PR-AUC of approximately 86.22% in the reported evaluation.
-
-Project Workflow
-
-Load and explore the transaction dataset.
-
-Clean and preprocess the data.
-
-Engineer relevant transaction features.
-
-Split the data into training and testing sets.
-
-Train and evaluate machine learning models.
-
-Optimize the classification threshold.
-
-Deploy fraud prediction through a Streamlit application.
+## Disclaimer
+This project is developed for educational purposes and is not intended to replace professional banking fraud detection systems.
